@@ -1,13 +1,11 @@
 import Link from "next/link";
 import { client } from "../libs/client";
 import { useState } from "react";
+import styles from "@/styles/Home.module.scss"
 
 export default function Home({ blog }) {
   return (
-    <div>
-      <h1 className="text-6xl font-bold">
-      Hello world!
-    </h1>
+    <main className="main" >
       <ul>
         {blog.map((blog) => (
           <li key={blog.id}>
@@ -15,7 +13,7 @@ export default function Home({ blog }) {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 }
 
